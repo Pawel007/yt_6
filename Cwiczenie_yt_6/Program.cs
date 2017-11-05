@@ -10,10 +10,47 @@ namespace Cwiczenie_yt_6
     {
         static void Main(string[] args)
         {
-            Console.Write("Wpisz swoje Imie: ");
-            string name = Console.ReadLine();
-            Console.WriteLine("Witaj, " + name);
+            ValueTypes();
 
+            for (; ;)
+            {
+                Greeting();
+
+                Age();
+
+                Settings();
+            }
+
+        }
+
+        private static void ValueTypes()
+        {
+            int maxInt = int.MaxValue;
+            int minInt = int.MinValue;
+            long maxLong = long.MaxValue;
+            long minLong = long.MinValue;
+
+            Console.WriteLine("maxInt= " + maxInt);
+            Console.WriteLine("minInt= " + minInt);
+            Console.WriteLine("maxLong= " + maxLong);
+            Console.WriteLine("minLong= " + minLong);
+        }
+
+        /// <summary>
+        /// Ustawienia
+        /// </summary>
+        private static void Settings()
+        {
+            Console.ReadKey();
+            Console.Clear();
+            Console.ResetColor();
+        }
+
+        /// <summary>
+        /// Komunikat zalezny od wieku
+        /// </summary>
+        private static void Age()
+        {
             Console.Write("Wpisz ile masz lat: ");
             // int age = int.Parse(Console.ReadLine());
             int age;
@@ -32,8 +69,16 @@ namespace Cwiczenie_yt_6
             {
                 Console.WriteLine("Dostaniesz mleko");
             }
+        }
 
-            Console.ReadKey();
+        /// <summary>
+        /// Wypisujemy powitanie uzytkownika
+        /// </summary>
+        private static void Greeting()
+        {
+            Console.Write("Wpisz swoje Imie: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Witaj, " + name);
         }
     }
 }
